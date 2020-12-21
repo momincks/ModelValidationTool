@@ -46,6 +46,16 @@ Remember to change the ***model_config*** according to the model's format requir
 **Please make sure your label mapping list for that particular model matches its model output in order!**
 ***
 ## Augmentations:
+**Variety** parameter defines how many augmentation combinations will be generated in this seed.
+**It's strongly recommended that this parameter should be > dataset size * dataset_multipier.**
+You can save the seed or load a seed by changing:
+```
+# within main_config.json:
+# to save new seed (seed name will be in datetime format):
+"load_seed_preset": false
+# to load a seed:
+"load_seed_preset": "./lib/seeds/[seedname].json"
+```
 Currently supported data augmentation methods:
 *   **horizontal_shift**: intensity, min-max range, -1 to 1
 *   **vertical_shift**: intensity, min-max range, -1 to 1
@@ -59,4 +69,5 @@ Currently supported data augmentation methods:
 *   **pixelation**: intensity, min-max range, 0 to 1
 
 For detailed augmentation effects, please check ***./demo/***.
-***noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
+
+***Noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
