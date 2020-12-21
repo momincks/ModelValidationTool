@@ -70,3 +70,6 @@ Currently supported data augmentation methods:
 *   **pixelation**: intensity, min-max range, 0 to 1
 
 For detailed augmentation effects, please check ***./demo/***. ***Noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
+## Tips:
+*   It's highly recommended that to ***turn on data augmentation*** (wild intensity maybe) and set ***"data_multipier" to 3 or even higher***. So the tool will repeat the dataset with different augmentation combinations.
+*   Data in datasets should be ***easily labeled by humans***. This way we can test the models with accurate true labels.
