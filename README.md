@@ -57,5 +57,6 @@ Currently supported data augmentation methods:
 *   **noise_mask**: intensity, min-max range, 0 to 1
 *   **pixel_attack**: intensity, min-max range, 0 to 1
 *   **pixelation**: intensity, min-max range, 0 to 1
+
 For detailed augmentation effects, please check ***./demo/***.
 ***noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
