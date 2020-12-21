@@ -44,6 +44,7 @@ Remember to change the ***model_config*** according to the model's format requir
 * **shape**: NHWC or NCHW
 * **channel**: RGB or BGR
 * **scale**: 0-1 or 0-255
+
 **Please make sure your label mapping list for that particular model matches its model output in order!**
 ***
 ## Augmentations:
