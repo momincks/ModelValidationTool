@@ -36,6 +36,7 @@ test1:
 ...
 ```
 The class names of class1, class2, class3.. should be defined in ***"label_mapping"*** under ***dataset_config***.
+Run ***main.py*** after you prepared configs, datasets and models.
 ### - model preparations:
 The models can be either put under the directory ***./lib/datasets/[custom_name]/*** or located in other place.
 As long as the path is correct.
