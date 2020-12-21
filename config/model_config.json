@@ -1,0 +1,31 @@
+[
+        {
+            "model_path": "./lib/models/onnx/model1.onnx",
+            "input_size": [224,224],
+            "input_divided_by_255": false,
+            "input_RGB_or_BGR": "BGR",
+            "input_NHWC_or_NCHW": "NCHW",
+            "label_mapping": 
+                [
+                    "background",
+                    "dumptruck_closed",
+                    "dumptruck_opened_empty",
+                    "dumptruck_opened_filled"
+                ]
+        }
+    ,
+        {
+            "model_path": "./lib/models/onnx/model2.onnx",
+            "input_size": [224,224],
+            "input_divided_by_255": false,
+            "input_RGB_or_BGR": "BGR",
+            "input_NHWC_or_NCHW": "NCHW",
+            "label_mapping": 
+                [
+                    "background",
+                    "dumptruck_closed",
+                    "dumptruck_opened_empty",
+                    "dumptruck_opened_filled"
+                ]
+        }
+]

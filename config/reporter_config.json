@@ -1,0 +1,4 @@
+{
+    "confusion_matrix_plot_size": [15,7.5],
+    "confidence_plot_size": false
+}
