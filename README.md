@@ -59,16 +59,26 @@ You can save the seed or load a seed by changing:
 "load_seed_preset": "./lib/seeds/[seedname].json"
 ```
 Currently supported data augmentation methods:
-*   **horizontal_shift**: intensity, min-max range, -1 to 1
-*   **vertical_shift**: intensity, min-max range, -1 to 1
-*   **horizontal_flip**: probablity, integer, 0 to 1 
-*   **vertical_flip**: probablity, interger, 0 to 1
-*   **rotation**: intensity, min-max range, -1 to 1
-*   **brightness**: intensity, min-max range, -1 to 1
-*   **contrast**: intensity, min-max range, -1 to 1
-*   **noise_mask**: intensity, min-max range, 0 to 1
-*   **pixel_attack**: intensity, min-max range, 0 to 1
-*   **pixelation**: intensity, min-max range, 0 to 1
+*   **horizontal_shift**: intensity, list, min-max range, -1 to 1
+![](./demo/horizontal_shift.jpg)
+*   **vertical_shift**: intensity, list, min-max range, -1 to 1
+![](./demo/vertical_shift.jpg)
+*   **horizontal_flip**: probablity, integer, 0 to 1
+ ![](./demo/horizontal_flip.jpg)
+*   **vertical_flip**: probablity, integer, 0 to 1
+![](./demo/vertical_flip.jpg)
+*   **rotation**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+![](./demo/rotation+0.2.jpg)
+*   **brightness**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+![](./demo/brightness+0.2.jpg)
+*   **contrast**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+![](./demo/contrast+0.2.jpg)
+*   **noise_mask**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+![](./demo/noise_mask+0.2.jpg)
+*   **pixel_attack**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+![](./demo/pixel_attack+0.2.jpg)
+*   **pixelation**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+![](./demo/pixelation+0.2.jpg)
 
 For detailed augmentation effects, please check ***./demo/***. ***Noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
 ***
