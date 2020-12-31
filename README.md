@@ -36,6 +36,7 @@ test1:
 ...
 ```
 The class names of class1, class2, class3.. should be defined in ***"label_mapping"*** under ***dataset_config***.
+Run ***main.py*** after you prepared configs, datasets and models.
 ### - model preparations:
 The models can be either put under the directory ***./lib/datasets/[custom_name]/*** or located in other place.
 As long as the path is correct.
@@ -43,19 +44,44 @@ Remember to change the ***model_config*** according to the model's format requir
 * **shape**: NHWC or NCHW
 * **channel**: RGB or BGR
 * **scale**: 0-1 or 0-255
+
 **Please make sure your label mapping list for that particular model matches its model output in order!**
 ***
 ## Augmentations:
+**Variety** parameter defines how many augmentation combinations will be generated in this seed.
+**It's strongly recommended that this parameter should be > dataset size * dataset_multipier.**
+You can save the seed or load a seed by changing:
+```
+# within main_config.json:
+# to save new seed (seed name will be in datetime format):
+"load_seed_preset": false
+# to load a seed:
+"load_seed_preset": "./lib/seeds/[seedname].json"
+```
 Currently supported data augmentation methods:
-*   **horizontal_shift**: intensity, min-max range, -1 to 1
-*   **vertical_shift**: intensity, min-max range, -1 to 1
-*   **horizontal_flip**: probablity, integer, 0 to 1 
-*   **vertical_flip**: probablity, interger, 0 to 1
-*   **rotation**: intensity, min-max range, -1 to 1
-*   **brightness**: intensity, min-max range, -1 to 1
-*   **contrast**: intensity, min-max range, -1 to 1
-*   **noise_mask**: intensity, min-max range, 0 to 1
-*   **pixel_attack**: intensity, min-max range, 0 to 1
-*   **pixelation**: intensity, min-max range, 0 to 1
-For detailed augmentation effects, please check ***./demo/***.
-***noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
+*   **horizontal_shift**: intensity, list, min-max range, -1 to 1
+![](./demo/horizontal_shift.jpg)
+*   **vertical_shift**: intensity, list, min-max range, -1 to 1
+![](./demo/vertical_shift.jpg)
+*   **horizontal_flip**: probablity, integer, 0 to 1
+ ![](./demo/horizontal_flip.jpg)
+*   **vertical_flip**: probablity, integer, 0 to 1
+![](./demo/vertical_flip.jpg)
+*   **rotation**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+![](./demo/rotation+0.2.jpg)
+*   **brightness**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+![](./demo/brightness+0.2.jpg)
+*   **contrast**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+![](./demo/contrast+0.2.jpg)
+*   **noise_mask**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+![](./demo/noise_mask+0.2.jpg)
+*   **pixel_attack**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+![](./demo/pixel_attack+0.2.jpg)
+*   **pixelation**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+![](./demo/pixelation+0.2.jpg)
+
+For detailed augmentation effects, please check ***./demo/***. ***Noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
+***
+## Tips:
+*   It's highly recommended that to ***turn on data augmentation*** (wild intensity maybe) and set ***"data_multipier" to 3 or even higher***. So the tool will repeat the dataset with different augmentation combinations.
+*   Data in datasets should be ***easily labeled by humans***. This way we can test the models with accurate true labels.
