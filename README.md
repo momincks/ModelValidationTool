@@ -59,25 +59,35 @@ You can save the seed or load a seed by changing:
 "load_seed_preset": "./lib/seeds/[seedname].json"
 ```
 Currently supported data augmentation methods:
-*   **horizontal_shift**: intensity, list, min-max range, -1 to 1
-![](./demo/horizontal_shift.jpg)
-*   **vertical_shift**: intensity, list, min-max range, -1 to 1
-![](./demo/vertical_shift.jpg)
-*   **horizontal_flip**: probablity, integer, 0 to 1
+*   **horizontal_shift**: intensity, list, min-max range, -1 to 1, +0.2:
+
+![](./demo/horizontal_shift+0.2.jpg)
+*   **vertical_shift**: intensity, list, min-max range, -1 to 1, +0.2:
+
+![](./demo/vertical_shift+0.2.jpg)
+*   **horizontal_flip**: probablity, integer, 0 to 1:
+
  ![](./demo/horizontal_flip.jpg)
-*   **vertical_flip**: probablity, integer, 0 to 1
+*   **vertical_flip**: probablity, integer, 0 to 1:
+
 ![](./demo/vertical_flip.jpg)
-*   **rotation**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+*   **rotation**: intensity, list, min-max range, -1 to 1, +0.2:
+
 ![](./demo/rotation+0.2.jpg)
-*   **brightness**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+*   **brightness**: intensity, list, min-max range, -1 to 1, +0.2:
+
 ![](./demo/brightness+0.2.jpg)
-*   **contrast**: intensity, list, min-max range, -1 to 1, 0.2 looks like:
+*   **contrast**: intensity, list, min-max range, -1 to 1, +0.2:
+
 ![](./demo/contrast+0.2.jpg)
-*   **noise_mask**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+*   **noise_mask**: intensity, list, min-max range, 0 to 1, +0.2:
+
 ![](./demo/noise_mask+0.2.jpg)
-*   **pixel_attack**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+*   **pixel_attack**: intensity, list, min-max range, 0 to 1, +0.2:
+
 ![](./demo/pixel_attack+0.2.jpg)
-*   **pixelation**: intensity, list, min-max range, 0 to 1, 0.2 looks like:
+*   **pixelation**: intensity, list, min-max range, 0 to 1, +0.2:
+
 ![](./demo/pixelation+0.2.jpg)
 
 For detailed augmentation effects, please check ***./demo/***. ***Noise_mask*** and ***pixel_attack*** are aggressive methods. Please fine-tune the parameters each time.
