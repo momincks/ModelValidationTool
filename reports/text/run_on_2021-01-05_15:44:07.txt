@@ -1,0 +1,12 @@
+Performance of ./lib/models/onnx/model1.onnx:
+ fps on GPU: 210.4
+ crossentropy:0.222
+ precision:[0.99, 1.0, 0.74, 0.96]
+ recall:[0.98, 0.96, 0.97, 0.76]
+ label:['background', 'dumptruck_closed', 'dumptruck_opened_empty', 'dumptruck_opened_filled']
+Performance of ./lib/models/onnx/model2.onnx:
+ fps on GPU: 264.5
+ crossentropy:0.092
+ precision:[0.98, 1.0, 0.97, 0.98]
+ recall:[0.99, 0.98, 0.97, 0.92]
+ label:['background', 'dumptruck_closed', 'dumptruck_opened_empty', 'dumptruck_opened_filled']

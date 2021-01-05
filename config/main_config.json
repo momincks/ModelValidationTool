@@ -1,5 +1,5 @@
 {
     "onnx_or_trt": "onnx",
-    "data_augmentation": true,
+    "data_augmentation": false,
     "load_seed_preset": false
 }

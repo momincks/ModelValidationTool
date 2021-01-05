@@ -113,9 +113,9 @@ class Loader:
             print("No seed preset is defined. Generating seed...")
             self.generate_seed()
 
-        if self.seed["variety"] < len(self.dataset_path):
-            print("Seed variety < numbers of data * dataset multiplier. "
-                    "Consider to generate a biggest seed with larger seed variety.")
+            if self.seed["variety"] < len(self.dataset_path):
+                print("Seed variety < numbers of data * dataset multiplier. "
+                        "Consider to generate a biggest seed with larger seed variety.")
 
         if len(self.dataset_path) < 2000:
             print("Dataset is too small (<2000). FPS may not be accurate.")

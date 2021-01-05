@@ -1,6 +1,6 @@
 import os
 import sys
-sys.tracebacklimit = 0
+#sys.tracebacklimit = 0
 import warnings
 from glob import glob
 from loader import Loader
